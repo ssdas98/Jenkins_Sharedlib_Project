@@ -1,0 +1,16 @@
+@Library('Sharedlib_demo') _
+
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            steps{
+                welcome("Niki")
+                script {
+                    sumcalculator.add(10,20)
+                    org.mycompany.pipeline.Helper.build('My_Project')
+                }
+            }
+        }
+    }
+}
